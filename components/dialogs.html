@@ -3,12 +3,12 @@
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta property="og:title" content="Components: Links - Wikimedia Design Style Guide (WikimediaUI)">
+	<meta property="og:title" content="Components: Dialogs - Wikimedia Design Style Guide (WikimediaUI)">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://design.wikimedia.org/style-guide/components/links.html">
 	<meta property="og:image" content="https://design.wikimedia.org/style-guide/img/design-style-guide.png">
 	<link rel="stylesheet" href="../css/build/wmui-style-guide.min.css">
-	<title>Components: Links – Wikimedia Design Style Guide</title>
+	<title>Components: Dialogs – Wikimedia Design Style Guide</title>
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/,'js--on');
 	</script>
@@ -17,7 +17,7 @@
 	<script src="../js/matomo-tracking.min.js"></script>
 	<script src="../js/wikimedia-design-style-guide.min.js" async></script>
 </head>
-<body class="page--components page--components-links" vocab="http://schema.org/" typeof="WebPage">
+<body class="page--components page--components-dialogs" vocab="http://schema.org/" typeof="WebPage">
 	<header id="header" class="header">
 		<div class="content-box">
 			<a href="#content" class="is-aural is-focusable">Jump to content</a>
@@ -49,7 +49,7 @@
 						</li>
 						<li class="nav__item is-on"><a href="links.html">Components</a>
 							<ul class="nav__sub-items">
-								<li class="nav__sub-item is-on"><a href="links.html">Links</a></li>
+								<li class="nav__sub-item"><a href="links.html">Links</a></li>
 								<li class="nav__sub-item"><a href="buttons.html">Buttons</a></li>
 								<li class="nav__sub-item"><a href="button-groups.html">Button groups</a></li>
 								<li class="nav__sub-item"><a href="checkboxes.html">Checkboxes</a></li>
@@ -62,7 +62,7 @@
 								<li class="nav__sub-item"><a href="file-inputs.html">File inputs</a></li>
 								<li class="nav__sub-item"><a href="messages.html">Messages</a></li>
 								<li class="nav__sub-item"><a href="language-selectors.html">Language selectors</a></li>
-								<li class="nav__sub-item"><a href="dialogs.html">Dialogs</a></li>
+								<li class="nav__sub-item is-on"><a href="dialogs.html">Dialogs</a></li>
 							</ul>
 						</li>
 						<!-- <li><a href="../patterns.html">Patterns</a></li> -->
@@ -73,64 +73,80 @@
 			<div class="col col--end">
 				<main id="content" class="content">
 					<div class="page__parent-title">Components</div>
-					<h1 class="page__title">Links</h1>
-					<p class="page__lead">Links signal an action that will let the user navigate to another page, view or resource, when they click or tap on them. The following examples are emphasized in bold for presentation only.</p>
+					<h1 class="page__title">Dialogs</h1>
+					<p class="page__lead">Dialogs are elements that are overlaid on a web page or app in order to present necessary information and tasks. Dialogs are also sometimes referred to as modals and overlays.</p>
 					<figure class="components__intro">
-						<img src="../img/components/links_intro.svg" alt="link visual example">
+						<img src="../img/components/FIXMEdialogs_intro.svg" alt="dialogs visual example">
 					</figure>
 
 					<section id="using">
-						<h2>Using links</h2>
-						<p>Links must include a descriptive link text or a combination of the text and an additional icon.</p>
+						<h2>Using dialogs</h2>
+						<p>Dialogs facilitate communication between the system and user. They perform best when used for urgent decisions or as a workflow within a bigger task as they don’t require loading a new page and keep actions in context. Dialogs can and aim to be disruptive since the user needs to interact with or close the dialog before moving on, and therefore should be used sparingly and only on occasions that necessitate its use.</p>
 					</section>
 					<section id="designing">
-						<h2>Designing</h2>
-						<p><strong>Link text</strong><br>
-							Link text should describe the assigned action as clear and short as possible in active voice (e.g. download, submit form, search). </p>
-						<p><strong>Icon</strong> <small class="is-subtle">(optional)</small><br>
-							Icons simplify user recognition and provide ability to shorten link text to a minimum. Icons should be limited to differentiate from a standard hyperlink (i.e. if it does something other than navigating to a new page). In contrast to buttons, icons are only allowed additionally to link text, not as only link signifier.
-						</p>
+						<h2 id="types">Designing and Types</h2>
+						<p>There are two basic forms a dialog can take: simple or complex. Simple dialogs are mainly for short messages, confirmations or alerts while complex dialogs help perform a more in depth task.</p>
+						<h3 id="simple-dialog">Simple dialog</h3>
+						<img src="FIXME" alt="">
+						<p>A simple dialog contains:</p>
+						<ol>
+							<li>A title</li>
+							<li>Short message. Aim for one or two lines of copy to make these easy and quick to understand. </li>
+							<li>A confirmation action</li>
+							<li>Dismissive or secondary action (Optional)</li>
+							<li>A 'close' icon-only button (X) (Optional)</li>
+						</ol>
+						<p>If the action text is too long, the confirmation action may be stacked above the secondary action.</p>
+						<p>The simple dialog looks and behaves the same between desktop and mobile web. They should never need scrolling behavior and the entire unit should be visible on even the smallest screens.</p>
 						<p>Examples of non-standard links include:</p>
+						<img src="FIXME" alt="">
+
+						<h3 id="complex-dialog">Complex dialog</strong></h3>
+						<img src="FIXME" alt="">
+						<p>A complex dialog contains:</p>
+						<ol>
+							<li>A title</li>
+							<li>A 'close' icon-only button (X) (Optional)</li>
+							<li>One confirmation action, with all other actions living within the content of the dialog </li>
+							<li>A fixed top and bottom bar</li>
+						</ol>
+						<p>The content within a complex dialog requires more detailed information and interaction from the user, which can be displayed in many forms: tables, tabs, lists, or any other layout found in our style guide.</p>
+						<p>On desktop, the confirmation action for a complex dialog lives in the bottom right.</p>
+						<p>On mobile web, the confirmation action lives in the top right, the same implementation as the toolbar, in order to avoid any issues with the virtual keyboard.</p>
+					</section>
+					<section id="positioning">
+						<p>All dialogs are vertically and horizontally centered on the canvas. We aim to keep simple dialogs at a fixed width of 370 dp on desktop while allowing them to use 90% of the width on mobile web. This helps make them the focus of the screen while still allowing a line length that is quick and easy to comprehend.</p>
+						<img src="FIXME" alt="">
+						<p>Complex dialogs are flexible on width, but they should strive to be at least 35% and no more than 75% of the width of the viewport on desktop. You may choose the width that best suits the content and experience you are presenting. All complex dialogs are fullscreen on mobile.</p>
+						<img src="FIXME" alt="">
+						<p><strong>Scrolling</strong><br>
+							If needed, scrolling is allowed in complex dialogs, but should be used sparingly. While scrolling, the top bar bottom border appears and both the top and bottom sections become fixed as content scrolls underneath them.
+						</p>
+						<img src="FIXME" alt="">
+						<p><strong>Closing</strong><br>
+							A dialog can be dismissed by:</p>
 						<ul>
-							<li>Links that open a modal instead of a new page (e.g. map links)</li>
-							<li>Links that open a file instead of a web page (e.g. PDF or document links)</li>
-							<li>Links that cause something to happen that the user would otherwise not expect (e.g. play a sound, like pronunciation links)</li>
-							<li>Links that open a new website instead of just a new page (external links)<sup><a href="#references">[1]</a></sup></li>
-							<li>Links that open a non-web protocol URI (e.g. <code>mailto:</code>, <code>tel:</code> links)</li>
+							<li>The close button (X)</li>
+							<li>A dismissive action like “Cancel“</li>
+							<li>Tapping or clicking anywhere outside of the dialog on the background</li>
 						</ul>
-						<p>Several Wikimedia Movement projects provide extensive “manuals of style” for applying and designing for links, for example English Wikipedia.<sup><a href="#references">[2]</a></sup></p>
+						<p><strong>Background</strong><br>
+							Behind every dialog, there is a screen of Base100 (#fff) at 65% opacity. This is to allow continued context while focusing on the dialog.
+						</p>
+						<p><strong>Shadows</strong><br>
+							Aside from the full screen complex dialog on mobile web, all dialogs have a drop shadow in order to separate it more clearly from the content below. This shadow is a 25% transparent black with the X axis moved 0 pixels, the Y axis moved 2 pixels, and a 2 pixel blur.
+						<p><strong>Borders</strong><br>
+							Excluding full screen dialogs on mobile web, a radius of 2px should be applied to the dialog.</p>
+						<p><strong>Titles</strong><br>
+							All dialogs require a title. This should be a short, one line overview of the purpose of the dialog. Avoid truncating the title in order to fit the close or confirmation action (on mobile).</p>
 					</section>
 					<section id="states">
-						<h2>States of links</h2>
-						<p>The link styles outlined here were designed with accessible color variations to distinguish the link’s following visually separated interaction states: </p>
+						<h2>States of dialogs</h2>
+						<p>Buttons may be disabled until a required action is completed. </p>
 						<figure class="components__states">
-							<img src="../img/components/links_states.svg" alt="links states">
-							<figcaption class="figure__caption"></figcaption>
+							<img src="../img/components/FIXME.svg" alt="dialogs states">
 						</figure>
-						<p>Links focus outline is the default browser focus, here Blink based browsers only with outline color amendment to <span class="color-hint" style="--color-hint: #36c;" title="#36c">Accent50</span>. This varies in different browsers.<br>Links don't feature a disabled state. Consider using <a href="buttons.html#type-quiet-buttons">quiet buttons</a> for those applications instead.</p>
-					</section>
-					<section id="types">
-						<h2>Types</h2>
-						<p>By default, links are only underlined on interaction (hover, active).</p>
-
-						<h3>Underlined links</h3>
-						<p>To suit user preference and for accessibility reasons MediaWiki also provides a setting to always underline links.</p>
-						<figure class="components__intro">
-							<img src="../img/components/links_underlined_intro.svg" alt="Links of underlined type, visual example">
-						</figure>
-
-						<h3>New links</h3>
-						<p>A speciality of wiki software and MediaWiki are so called “new links”. Links to article and pages that are yet to be written. These apply <span class="color-hint" style="--color-hint: #d33;" title="#d33">Red50</span> in both, normal or underlined type.</p>
-						<figure class="components__intro">
-							<img src="../img/components/links_new_intro.svg" alt="Links of underlined type, visual example">
-						</figure>
-					</section>
-					<section id="references">
-						<h2>References</h2>
-						<ol>
-							<li><a href="https://en.wikipedia.org/wiki/Wikipedia:External_links" target="_blank" rel="noopener">English Wikipedia: External links</a></li>
-							<li><a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Linking" target="_blank" rel="noopener">English Wikipedia: Manual of Style/Linking</a></li>
-						</ol>
+						<p>Loading FIXME</p>
 					</section>
 				</main>
 			</div>
